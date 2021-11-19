@@ -27,7 +27,8 @@ function getCountryTranslatedName(isoCode, language){
  * @returns {Array}
  */
 function getCountriesBySubregion(subregion){
-   
+   var sudamerica = countries.filter(element => element.subregion === subregion);
+   return sudamerica
 }
 
 function main() {
