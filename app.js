@@ -1,11 +1,14 @@
 const countries = require('./countries.json');
 
+
 /** Get all the data of one single country given the ISO3 code.
  * @param  {string} isoCode
  * @returns {Object}
  */
 function getCountryByIso3(isoCode){
-    //Complete with your code
+    const id = countries.findIndex(element => element.iso3 === isoCode);
+    var argentina = countries[id];
+    return argentina;
 }
 
 /**
@@ -22,18 +25,21 @@ function getCountryTranslatedName(isoCode, language){
  * @returns {Array}
  */
 function getCountriesBySubregion(subregion){
-    //Complete with your code
+   
 }
 
 function main() {
+   
     console.log(
         '///// Ejercicio 1 /////\n',
         getCountryByIso3('ARG'),
         '\n');
+        
     console.log(
         '///// Ejercicio 2 /////\n',
         getCountryTranslatedName('ARG', 'ja'),
         '\n');
+
     console.log(
         '///// Ejercicio 3 /////\n',
         getCountriesBySubregion('South America'),
